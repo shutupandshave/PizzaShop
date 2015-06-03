@@ -1,0 +1,60 @@
+<form id="orderForm" ng-submit="order.addOrder()">
+    <div><a href="#/status" class="btn btn-sm"><i class="glyphicon glyphicon-info-sign"></i>Status</a></div>
+    <div>Total order: {{ order.orderCount }}</div>
+    <div class="form-group">
+        <label for="pieSize">Size:</label>
+        <select name="pieSize" id="pieSize" class="form-control">
+            <option value="">Personal</option>
+            <option value="">Small</option>
+            <option value="">Medium</option>
+            <option value="" selected>Large</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="pieCrust">Crust:</label>
+        <select class="form-control" name="pieCrust" id="pieCrust">
+            <option value="">Thin</option>
+            <option value="">Regular</option>
+            <option value="">Thick</option>
+        </select>
+    </div>
+    <div class="form-group"><label>Toppings:</label></div>
+    <div class="form-group" data-toggle="buttons">
+        <label class="btn btn-primary btn-sm" for="pepperoni">Pepperoni
+            <input type="checkbox" name="pepperoni" id="pepperoni"/>
+        </label>
+        <label class="btn btn-primary btn-sm" for="sausage">Sausage
+            <input type="checkbox" name="sausage" id="sausage"/>
+        </label>
+        <label class="btn btn-primary btn-sm" for="mushroom">Mushroom
+            <input type="checkbox" name="mushroom" id="mushroom"/>
+        </label>
+        <label class="btn btn-primary btn-sm" for="greenPeppers">Green Peppers
+            <input type="checkbox" name="greenPeppers" id="greenPeppers"/>
+        </label>
+        <label class="btn btn-primary btn-sm" for="ham">Ham
+            <input type="checkbox" name="ham" id="ham"/>
+        </label>
+        <label class="btn btn-primary btn-sm" for="pineapple">Pineapple
+            <input type="checkbox" name="pineapple" id="pineapple"/>
+        </label>
+        <label class="btn btn-primary btn-sm" for="onions">Onions
+            <input type="checkbox" name="onions" id="onions"/>
+        </label>
+        <label class="btn btn-primary btn-sm" for="cheese">Extra Cheese
+            <input type="checkbox" name="cheese" id="cheese"/>
+        </label>
+
+    </div>
+    <div>
+        <label for="delivery">
+            <input type="checkbox" name="delivery" id="delivery"/>
+            Delivery?
+
+        </label>
+    </div>
+    <div>
+        <input type="submit" class="btn btn-success" value="Order Now!"/>
+    </div>
+</form>
+<wm-pizza-bar></wm-pizza-bar>
